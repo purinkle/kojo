@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="ROBOTS" content="NOODP" />
-  <title><%= page_title %></title>
-  <%= stylesheet_link_tag :application, :media => 'all' %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title><%= page_title(app_name: "kōjō") %></title>
+  <meta name="description" content="Artisan web development for the modern age">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag :application, media: "all" %>
   <%= csrf_meta_tags %>
 </head>
-<body class="<%= body_class %>">
-  <%= render 'flashes' -%>
+
+<body>
   <%= yield %>
-  <%= render 'javascript' %>
 </body>
 </html>
